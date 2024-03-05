@@ -1,0 +1,21 @@
+name: Generate WordPress Archive
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-archive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Generating zip
+        uses: rudlinkon/action-wordpress-build-zip@master
+        with:
+          retention-days: 7 # Optional; defaults to 3 - Configuring a custom artifact retention period
+          # install-composer: true # Optional; defaults to false - Composer dependencies will be installed if you enable this option
+          # npm-run-build: true # Optional; defaults to false - Set you custom node version
+          # node-version: 20 # Optional; defaults to 16 - npm run build will be run if you enable this option

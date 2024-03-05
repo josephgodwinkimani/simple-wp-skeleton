@@ -1,0 +1,1 @@
+* `local-xdebuginfo.php` is used by LocalWP you can remove it if you opt for other development environments.

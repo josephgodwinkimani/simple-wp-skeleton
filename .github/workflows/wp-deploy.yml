@@ -1,0 +1,22 @@
+name: Deploy with SFTP
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy_job:
+    runs-on: ubuntu-latest
+    name: deploy
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: deploy file
+        uses: wlixcc/SFTP-Deploy-Action@v1.0
+        with:
+          username: ${{ secrets.FTP_USERNAME }}
+          server: ${{ secrets.FTP_SERVER }}
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
+          local_path: 'wp-content'
+          remote_path: '/home/peekaboo/wordpress.kr/public_html/wp-content/themes'
+          args: '-P 20'

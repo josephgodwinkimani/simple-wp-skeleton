@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress">
+    <description>Custom ruleset for WordPress coding standards</description>
+
+    <!-- Set the coding standard to WordPress -->
+    <config name="installed_paths" value="vendor/wp-coding-standards/wpcs"/>
+
+    <!-- Define the standard to use -->
+    <arg name="standard" value="WordPress"/>
+    <file>.</file>
+    <arg name="extensions" value="php"/>
+
+    <!-- Set the minimum supported WordPress version -->
+    <config name="testVersion" value="6.4.3"/>
+
+    <!-- Exclude themes -->
+    <exclude-pattern>wp-content/themes/twentytwentytwo/</exclude-pattern>
+    <exclude-pattern>wp-content/themes/twentytwentythree/</exclude-pattern>
+    <exclude-pattern>wp-content/themes/twentytwentyfour/</exclude-pattern>
+
+    <!-- Exclude plugins -->
+    <exclude-pattern>wp-content/plugins/akismet/</exclude-pattern>
+    <exclude-pattern>wp-content/plugins/hello.php</exclude-pattern>
+
+    <exclude-pattern>zip.php</exclude-pattern>
+    <exclude-pattern>local-xdebuginfo.php</exclude-pattern>
+
+    <!-- Add plugins that you want to exclude -->
+    <exclude-pattern>wp-content/plugins/askimet/</exclude-pattern>
+    <exclude-pattern>vendor/</exclude-pattern>
+  
+  <arg value="-colors"/>
+  <arg value="ns"/>
+  <rule ref="PSR2"/>
+</ruleset>

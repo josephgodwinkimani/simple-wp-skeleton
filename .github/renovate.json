@@ -1,0 +1,18 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": ["config:base"],
+    "platform": "github",
+    "timezone": "Africa/Nairobi",
+    "packageRules": [
+      {
+        "updateTypes": ["minor", "patch"],
+        "automerge": false
+      }
+    ],
+    "vulnerabilityAlerts": {
+      "enabled": true,
+      "schedule": ["after 9am on Sunday"],
+      "commitMessagePrefix": "[SECURITY]"
+    }
+  }
+  

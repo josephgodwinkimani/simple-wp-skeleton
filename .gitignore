@@ -1,8 +1,38 @@
-# Ignore everything in the root except the "wp-content" directory.
-!.gitignore
-!wp-content/
+# Ignore everything in the root directory.
+vendor/
+wp-admin/
+wp-includes/
+index.php
+license.txt
+readme.html
+wp-activate.php
+wp-blog-header.php
+wp-comments-post.php
+wp-config-sample.php
+wp-config.php
+wp-cron.php
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
 
-# Ignore everything in the "wp-content" directory, except the "plugins" and "themes" directories.
+# track these files, if they exist
 wp-content/*
 !wp-content/plugins/
 !wp-content/themes/
+!wp-content/uploads/
+# replace this with the theme you are using
+!wp-content/themes/twentytwentyfour/
+wp-content/themes/twentytwentythree/
+wp-content/themes/twentytwentytwo/
+!.gitignore
+!.editorconfig
+!.phpcs.xml.dist
+!README.md
+!CHANGELOG.md
+!composer.json
+!.wordpress-version-checker.json

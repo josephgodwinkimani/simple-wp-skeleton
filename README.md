@@ -1,1 +1,7 @@
-* `local-xdebuginfo.php` is used by LocalWP you can remove it if you opt for other development environments.
+[![WPCS check](https://github.com/josephgodwinkimani/simple-wp-skeleton/actions/workflows/wpcs.yml/badge.svg)](https://github.com/josephgodwinkimani/simple-wp-skeleton/actions/workflows/wpcs.yml) [![Deploy with SFTP](https://github.com/josephgodwinkimani/simple-wp-skeleton/actions/workflows/wp-deploy.yml/badge.svg)](https://github.com/josephgodwinkimani/simple-wp-skeleton/actions/workflows/wp-deploy.yml) [![Generate WordPress Archive](https://github.com/josephgodwinkimani/simple-wp-skeleton/actions/workflows/wordpress-build-zip.yml/badge.svg)](https://github.com/josephgodwinkimani/simple-wp-skeleton/actions/workflows/wordpress-build-zip.yml) [![.github/workflows/wordpress-version-checker.yml](https://github.com/josephgodwinkimani/simple-wp-skeleton/actions/workflows/wordpress-version-checker.yml/badge.svg)](https://github.com/josephgodwinkimani/simple-wp-skeleton/actions/workflows/wordpress-version-checker.yml)
+
+* The file `local-xdebuginfo.php` is utilized by LocalWP; should you choose to utilize alternative development environments, you have the option to remove it.
+
+* You have the option to compress the `wp-content/` directory instead of directly committing the files and folders to Git by executing the command `php zip.php`.
+
+* You have the option to utilize the command `composer lint` to assess WordPress code violations within your themes and/or plugins. Please review the `phpcs.xml.dist` file to specify exclusions for themes or plugins that should not undergo scrutiny.
